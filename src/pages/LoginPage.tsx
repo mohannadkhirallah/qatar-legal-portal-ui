@@ -49,20 +49,20 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-background via-muted/50 to-background flex items-center justify-center p-4 ${isRTL ? 'rtl' : 'ltr'}`}>
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <div className={`min-h-screen bg-gradient-to-br from-maroon-900 via-maroon-800 to-maroon-900 flex items-center justify-center p-4 ${isRTL ? 'rtl' : 'ltr'}`}>
+      <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative z-10 w-full max-w-lg">
-        <Card className="shadow-2xl border bg-card/95 backdrop-blur-sm">
+        <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm">
           <CardHeader className="text-center pb-8 pt-8">
             <div className="flex justify-center mb-6">
-              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-lg">
-                <Scale className="h-10 w-10 text-primary-foreground" />
+              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl shadow-lg">
+                <Scale className="h-10 w-10 text-white" />
               </div>
             </div>
-            <CardTitle className="text-3xl font-bold text-foreground mb-3">
+            <CardTitle className="text-3xl font-bold text-maroon-800 mb-3">
               {t('auth.welcomeTitle')}
             </CardTitle>
-            <CardDescription className="text-muted-foreground text-base font-medium">
+            <CardDescription className="text-maroon-600 text-base font-medium">
               {t('auth.welcomeSubtitle')}
             </CardDescription>
           </CardHeader>
@@ -85,17 +85,17 @@ const LoginPage: React.FC = () => {
 
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
-                    <span className="w-full border-t border-border" />
+                    <span className="w-full border-t border-gray-300" />
                   </div>
                   <div className="relative flex justify-center text-sm">
-                    <span className="bg-card px-4 text-muted-foreground font-medium">أو</span>
+                    <span className="bg-white px-4 text-gray-500 font-medium">أو</span>
                   </div>
                 </div>
 
                 <Button
                   onClick={() => setShowDemoLogin(true)}
                   variant="outline"
-                  className="w-full border-2 border-border text-foreground hover:bg-accent py-4 text-lg font-semibold rounded-lg transition-all duration-200"
+                  className="w-full border-2 border-maroon-200 text-maroon-700 hover:bg-maroon-50 py-4 text-lg font-semibold rounded-lg transition-all duration-200"
                   size="lg"
                 >
                   <Building className="mr-2 h-5 w-5 rtl:ml-2 rtl:mr-0" />
@@ -105,7 +105,7 @@ const LoginPage: React.FC = () => {
             ) : (
               <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-3">
+                  <label className="block text-sm font-semibold text-maroon-700 mb-3">
                     {t('auth.selectRole')}
                   </label>
                   <Select value={selectedRole} onValueChange={(value: 'Admin' | 'Reviewer' | 'Publisher') => setSelectedRole(value)}>
@@ -115,13 +115,13 @@ const LoginPage: React.FC = () => {
                     <SelectContent>
                       <SelectItem value="Admin">
                         <div className="flex items-center space-x-3 rtl:space-x-reverse py-1">
-                          <Shield className="h-5 w-5 text-destructive" />
+                          <Shield className="h-5 w-5 text-red-500" />
                           <span className="font-medium">Admin - مدير النظام</span>
                         </div>
                       </SelectItem>
                       <SelectItem value="Reviewer">
                         <div className="flex items-center space-x-3 rtl:space-x-reverse py-1">
-                          <Eye className="h-5 w-5 text-primary" />
+                          <Eye className="h-5 w-5 text-blue-500" />
                           <span className="font-medium">Reviewer - مراجع قانوني</span>
                         </div>
                       </SelectItem>
@@ -137,7 +137,7 @@ const LoginPage: React.FC = () => {
 
                 <Button
                   onClick={handleDemoLogin}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-lg font-semibold rounded-lg transition-all duration-200"
+                  className="w-full bg-maroon-700 hover:bg-maroon-800 text-white py-4 text-lg font-semibold rounded-lg transition-all duration-200"
                   size="lg"
                 >
                   Continue as {selectedRole}
@@ -146,18 +146,18 @@ const LoginPage: React.FC = () => {
                 <Button
                   onClick={() => setShowDemoLogin(false)}
                   variant="ghost"
-                  className="w-full text-muted-foreground hover:text-foreground hover:bg-accent py-2"
+                  className="w-full text-maroon-600 hover:text-maroon-700 hover:bg-maroon-50 py-2"
                 >
                   ← Back to Login Options
                 </Button>
               </div>
             )}
 
-            <div className="pt-6 border-t border-border">
+            <div className="pt-6 border-t border-gray-200">
               <Button
                 onClick={toggleLanguage}
                 variant="ghost"
-                className="w-full flex items-center justify-center space-x-2 rtl:space-x-reverse text-muted-foreground hover:text-foreground hover:bg-accent py-3 rounded-lg"
+                className="w-full flex items-center justify-center space-x-2 rtl:space-x-reverse text-maroon-600 hover:text-maroon-700 hover:bg-maroon-50 py-3 rounded-lg"
               >
                 <Globe className="h-5 w-5" />
                 <span className="font-medium">{language === 'en' ? 'العربية' : 'English'}</span>
@@ -166,7 +166,7 @@ const LoginPage: React.FC = () => {
           </CardContent>
         </Card>
 
-        <p className="text-center text-muted-foreground text-base mt-8 font-medium">
+        <p className="text-center text-white/80 text-base mt-8 font-medium">
           {t('auth.loginDescription')}
         </p>
       </div>
