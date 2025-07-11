@@ -50,51 +50,76 @@ const LoginPage: React.FC = () => {
 
   return (
     <div className={`min-h-screen flex ${isRTL ? 'rtl flex-row-reverse' : 'ltr'}`}>
-      {/* Left Side - Branding */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-maroon-900 via-maroon-800 to-maroon-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative z-10 flex flex-col justify-center items-center px-12 text-white">
-          <div className="mb-8">
-            <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-gold-400 to-gold-600 rounded-3xl shadow-2xl mb-6">
-              <Scale className="h-12 w-12 text-white" />
+      {/* Left Side - Geometric Background */}
+      <div className="hidden lg:flex lg:w-1/2 bg-gray-50 relative overflow-hidden">
+        {/* Geometric Shapes Pattern */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="relative">
+            {/* Main 3D geometric shape */}
+            <div className="relative w-80 h-80">
+              {/* Base cylinder */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-64 h-32 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full shadow-lg"></div>
+              
+              {/* Twisted ribbon/shape */}
+              <div className="absolute top-8 left-1/2 transform -translate-x-1/2 -rotate-12">
+                <div className="w-48 h-40 bg-gradient-to-br from-gray-300 via-gray-200 to-gray-100 rounded-3xl shadow-xl relative overflow-hidden">
+                  {/* Dotted pattern overlay */}
+                  <div className="absolute inset-0 opacity-60">
+                    {Array.from({ length: 50 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute w-1 h-1 bg-gray-400 rounded-full"
+                        style={{
+                          left: `${Math.random() * 100}%`,
+                          top: `${Math.random() * 100}%`,
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              {/* Additional geometric elements */}
+              <div className="absolute top-16 right-8 w-12 h-12 bg-gray-200 rounded-lg transform rotate-45 shadow-md"></div>
+              <div className="absolute bottom-20 left-8 w-8 h-8 bg-gray-300 rounded-full shadow-sm"></div>
             </div>
-          </div>
-          <div className="text-center max-w-md">
-            <h1 className="text-4xl font-bold mb-4 leading-tight">
-              {t('auth.welcomeTitle')}
-            </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              {t('auth.welcomeSubtitle')}
-            </p>
-            <p className="text-white/80 text-lg">
-              {t('auth.loginDescription')}
-            </p>
           </div>
         </div>
         
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gold-400/20 rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gold-500/10 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-gold-400 rounded-full"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-gold-300 rounded-full"></div>
+        {/* Floating dots pattern */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 30 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-gray-300 rounded-full opacity-40"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 2}s`,
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Right Side - Login Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
         <div className="w-full max-w-md">
-          {/* Mobile Logo */}
-          <div className="lg:hidden flex justify-center mb-8">
-            <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl shadow-lg">
-              <Scale className="h-8 w-8 text-white" />
+          {/* Logo and System Title */}
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-maroon-700 to-maroon-800 rounded-2xl shadow-lg">
+                <Scale className="h-10 w-10 text-white" />
+              </div>
             </div>
-          </div>
-
-          <div className="lg:hidden text-center mb-8">
-            <h2 className="text-2xl font-bold text-maroon-800 mb-2">
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
               {t('auth.welcomeTitle')}
-            </h2>
-            <p className="text-maroon-600">
+            </h1>
+            <p className="text-lg text-gray-600 mb-1">
               {t('auth.welcomeSubtitle')}
+            </p>
+            <p className="text-sm text-gray-500">
+              National Authentication System
             </p>
           </div>
 
