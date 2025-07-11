@@ -26,28 +26,28 @@ const DashboardPage: React.FC = () => {
       value: '1,247',
       change: '+12%',
       icon: FileText,
-      color: 'bg-blue-500',
+      color: 'bg-gray-600',
     },
     {
       name: t('dashboard.pendingReview'),
       value: '23',
       change: '-5%',
       icon: Clock,
-      color: 'bg-yellow-500',
+      color: 'bg-gray-600',
     },
     {
       name: t('dashboard.approved'),
       value: '1,156',
       change: '+8%',
       icon: CheckCircle,
-      color: 'bg-green-500',
+      color: 'bg-gray-600',
     },
     {
       name: t('dashboard.rejected'),
       value: '68',
       change: '+2%',
       icon: XCircle,
-      color: 'bg-red-500',
+      color: 'bg-gray-600',
     },
   ];
 
@@ -96,13 +96,13 @@ const DashboardPage: React.FC = () => {
   const getActivityIcon = (type: string) => {
     switch (type) {
       case 'approve':
-        return <CheckCircle className="h-4 w-4 text-green-500" />;
+        return <CheckCircle className="h-4 w-4 text-gray-600" />;
       case 'upload':
-        return <Upload className="h-4 w-4 text-blue-500" />;
+        return <Upload className="h-4 w-4 text-gray-600" />;
       case 'reprocess':
-        return <AlertTriangle className="h-4 w-4 text-yellow-500" />;
+        return <AlertTriangle className="h-4 w-4 text-gray-600" />;
       default:
-        return <Activity className="h-4 w-4 text-gray-500" />;
+        return <Activity className="h-4 w-4 text-gray-600" />;
     }
   };
 
