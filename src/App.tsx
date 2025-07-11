@@ -13,6 +13,10 @@ import Layout from './components/Layout';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import DocumentsPage from './pages/DocumentsPage';
+import ReviewPage from './pages/ReviewPage';
+import AdminPage from './pages/AdminPage';
+import AuditPage from './pages/AuditPage';
+import SettingsPage from './pages/SettingsPage';
 
 import './i18n/config';
 
@@ -39,10 +43,10 @@ const App: React.FC = () => {
                   >
                     <Route path="dashboard" element={<DashboardPage />} />
                     <Route path="documents" element={<DocumentsPage />} />
-                    <Route path="review" element={<div className="p-6">Review Page - Coming Soon</div>} />
-                    <Route path="admin" element={<div className="p-6">Admin Page - Coming Soon</div>} />
-                    <Route path="audit" element={<div className="p-6">Audit Page - Coming Soon</div>} />
-                    <Route path="settings" element={<div className="p-6">Settings Page - Coming Soon</div>} />
+                    <Route path="review" element={<ReviewPage />} />
+                    <Route path="admin" element={<AdminPage />} />
+                    <Route path="audit" element={<AuditPage />} />
+                    <Route path="settings" element={<SettingsPage />} />
                   </Route>
                 </Routes>
               </div>
