@@ -88,7 +88,7 @@ const LoginPage: React.FC = () => {
                     <span className="w-full border-t border-gray-300" />
                   </div>
                   <div className="relative flex justify-center text-sm">
-                    <span className="bg-white px-4 text-gray-500 font-medium">أو</span>
+                    <span className="bg-white px-4 text-gray-500 font-medium">Or</span>
                   </div>
                 </div>
 
