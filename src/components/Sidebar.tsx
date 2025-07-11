@@ -69,8 +69,12 @@ const Sidebar: React.FC = () => {
     <div className="bg-maroon-800 text-white w-64 min-h-screen flex flex-col">
       <div className="p-6 border-b border-maroon-700">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
-          <div className="flex items-center justify-center w-10 h-10 bg-white rounded-lg">
-            <Scale className="h-6 w-6 text-maroon-800" />
+          <div className="flex items-center justify-center w-10 h-10 bg-white rounded-lg p-1">
+            <img 
+              src="https://itc.sjc.gov.qa/Style%20Library/images/Website/svg/logo.svg" 
+              alt="SJC Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
           <div>
             <h1 className="text-xl font-bold text-white">

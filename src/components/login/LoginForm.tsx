@@ -4,7 +4,7 @@ import { useAuth, User } from '../../contexts/AuthContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../ui/button';
-import { Scale, Globe, Building } from 'lucide-react';
+import { Globe, Building } from 'lucide-react';
 import RoleSelector from './RoleSelector';
 
 const LoginForm: React.FC = () => {
@@ -52,8 +52,12 @@ const LoginForm: React.FC = () => {
         {/* Logo and System Title */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
-            <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-maroon-700 to-maroon-800 rounded-2xl shadow-lg">
-              <Scale className="h-10 w-10 text-white" />
+            <div className="flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-lg p-2">
+              <img 
+                src="https://itc.sjc.gov.qa/Style%20Library/images/Website/svg/logo.svg" 
+                alt="SJC Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">
