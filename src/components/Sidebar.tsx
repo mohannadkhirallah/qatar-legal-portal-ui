@@ -69,11 +69,11 @@ const Sidebar: React.FC = () => {
     <div className="bg-maroon-800 text-white w-64 min-h-screen flex flex-col">
       <div className="p-6 border-b border-maroon-700">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
-          <div className="flex items-center justify-center w-10 h-10 bg-gold-500 rounded-lg">
+          <div className="flex items-center justify-center w-10 h-10 bg-white rounded-lg">
             <Scale className="h-6 w-6 text-maroon-800" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-gold-400">
+            <h1 className="text-xl font-bold text-white">
               {isRTL ? 'المجلس الأعلى للقضاء' : 'Supreme Judiciary'}
             </h1>
             <p className="text-sm text-maroon-200">
@@ -92,7 +92,7 @@ const Sidebar: React.FC = () => {
               to={item.href}
               className={`flex items-center space-x-3 rtl:space-x-reverse px-4 py-3 rounded-lg transition-colors ${
                 isActive(item.href)
-                  ? 'bg-maroon-700 text-gold-400 border-r-4 border-gold-400 rtl:border-r-0 rtl:border-l-4'
+                  ? 'bg-maroon-700 text-white border-r-4 border-white rtl:border-r-0 rtl:border-l-4'
                   : 'text-maroon-100 hover:bg-maroon-700 hover:text-white'
               }`}
             >
